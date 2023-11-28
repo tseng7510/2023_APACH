@@ -1,0 +1,61 @@
+.faq .item {
+  border-top: 4px solid #db002d;
+  padding: 30px 0 40px;
+}
+@media screen and (max-width: 767px) {
+  .faq .item {
+    padding: 20px 0 30px;
+  }
+}
+.faq .item .qBox {
+  color: #2D2D2C;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 25px;
+  line-height: 1;
+  display: block;
+  background: none;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 991px) {
+  .faq .item .qBox {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .item .qBox {
+    font-size: 1.25rem;
+    margin: 0 0 15px;
+  }
+}
+.faq .item .aBox {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin: 0 0 40px;
+  transition: all 0.3s ease;
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.4;
+}
+@media screen and (max-width: 991px) {
+  .faq .item .aBox {
+    font-size: 1rem;
+    margin: 0 0 30px;
+  }
+}
+.faq .item.active .aBox {
+  display: block;
+}
+.faq .item.active .inMore {
+  color: #fff;
+  border-color: #db002d;
+}
+.faq .item.active .inMore::before {
+  width: 100%;
+  left: 0;
+}
+.faq .item.active .inMore::after {
+  background: #fff;
+}/*# sourceMappingURL=faq.css.map */

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+.html::before {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 100%;
+  background: #041c5a;
+}
+.html .pageTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #2C2C2C;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+@media screen and (max-width: 1399px) {
+  .html .pageTitle {
+    font-size: 3.375rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .html .pageTitle {
+    font-size: 2.75rem;
+    margin: 0 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .html .pageTitle {
+    font-size: 2.125rem;
+  }
+}
+.html .editor {
+  margin: 0 auto;
+  color: #333333;
+  font-size: 1.3125rem;
+  line-height: 1.45;
+}
+@media screen and (max-width: 991px) {
+  .html .editor {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .html .editor {
+    font-size: 1rem;
+  }
+}
+.html .editor ul.style li {
+  position: relative;
+  padding: 5px 0 5px 20px;
+}
+.html .editor ul.style li::before {
+  content: "◆";
+  color: #041c5a;
+  position: absolute;
+  left: 0;
+}
+
+.editor span.title {
+  color: #db002d;
+  font-weight: 700;
+}/*# sourceMappingURL=html.css.map */

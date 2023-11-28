@@ -1,0 +1,225 @@
+.pageTitle {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #2C2C2C;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+@media screen and (max-width: 1399px) {
+  .pageTitle {
+    font-size: 3.375rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .pageTitle {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pageTitle {
+    font-size: 2.125rem;
+  }
+}
+
+.contactBox::before {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 100%;
+  background: #041c5a;
+}
+.contactBox .pageContent {
+  background: url("../images/in/contact_bg.jpg") right bottom no-repeat;
+}
+.contactBox .infoBox {
+  font-size: 18px;
+  margin: 0 0 3% 0;
+}
+.contactBox .infoBox .description {
+  color: #db002d;
+  font-size: 1.3125rem;
+  font-weight: bold;
+}
+.contactBox .infoBox ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .contactBox .infoBox ul {
+    flex-direction: column;
+  }
+}
+.contactBox .infoBox ul li {
+  margin: 0 20px 5px 0;
+  display: flex;
+  word-break: break-word;
+}
+.contactBox .infoBox ul li::before {
+  color: #FFF;
+  background: #9BA0D6;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 0 5px;
+  margin: 0 5px 0 0;
+}
+.contactBox .infoBox .tel::before {
+  content: "TEL";
+}
+.contactBox .infoBox .fax::before {
+  content: "FAX";
+}
+.contactBox .infoBox .mail::before {
+  content: "MAIL";
+}
+
+.contactBox {
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  .contactBox .container {
+    flex-direction: column;
+  }
+}
+.contactBox .formBox {
+  padding: 5%;
+  background: #FFF;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 991px) {
+  .contactBox .formBox {
+    width: 100%;
+    padding: 30px 20px 30px;
+  }
+}
+
+.contactBox .notice {
+  color: #FFF;
+  background: #9BA0D6;
+  display: block;
+  font-size: 1.125rem;
+  text-align: center;
+  padding: 3% 20px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1340px;
+  width: 100%;
+  line-height: 1.4;
+}
+.contactBox .formBox {
+  padding: 4%;
+}
+@media screen and (max-width: 991px) {
+  .contactBox .formBox {
+    padding: 30px 20px 5%;
+  }
+}
+.contactBox .mapBox {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+}
+.contactBox .mapBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 30%;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.contactBox .mapBox iframe {
+  width: 100%;
+  height: 690px;
+}
+.contactBox .pageBtnBox {
+  justify-content: center;
+}
+
+.contactOk::before {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 100%;
+  background: #041c5a;
+}
+.contactOk .txt {
+  position: relative;
+  z-index: 5;
+}
+@media screen and (max-width: 991px) {
+  .contactOk .txt {
+    padding: 0 15px;
+  }
+}
+.contactOk .txt .title {
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+  position: relative;
+  color: #333333;
+  font-size: 1.875rem;
+}
+@media screen and (max-width: 991px) {
+  .contactOk .txt .title {
+    font-size: 1.625rem;
+  }
+}
+.contactOk .txt .title span {
+  font-weight: normal;
+  display: block;
+}
+.contactOk .txt .subTitle {
+  margin: 0 0 3% 0;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+.contactOk .txt .subTitle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 32px;
+  z-index: -1;
+  background: #041c5a;
+}
+.contactOk .txt .subTitle span {
+  max-width: 320px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #fff;
+  display: block;
+  padding: 20px;
+  background: #041c5a;
+}
+@media screen and (max-width: 767px) {
+  .contactOk .txt .subTitle span {
+    font-size: 1rem;
+  }
+}
+.contactOk .txt .description {
+  color: #444444;
+  position: relative;
+  z-index: 1;
+  font-size: 1.125rem;
+}
+.contactOk .txt .description a {
+  color: #041c5a;
+  transition: 0.3 0.3s ease;
+}
+.contactOk .txt .description a:hover {
+  color: #041c5a;
+}
+.pageBtnBox .send{
+    max-width:220px;
+    white-space: nowrap;
+}
+/*# sourceMappingURL=contact.css.map */

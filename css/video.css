@@ -1,0 +1,86 @@
+.videoList .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px 40px;
+}
+@media screen and (max-width: 991px) {
+  .videoList .listBox {
+    gap: 50px 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .videoList .listBox {
+    gap: 40px 20px;
+  }
+}
+.videoList .listBox .item {
+  width: calc((100% - 40px) / 2);
+}
+@media screen and (max-width: 991px) {
+  .videoList .listBox .item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (max-width: 767px) {
+  .videoList .listBox .item {
+    width: 100%;
+  }
+}
+.videoList .listBox .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 9;
+  margin: -30px 0 0 10px;
+}
+@media screen and (max-width: 991px) {
+  .videoList .listBox .info {
+    flex-direction: column;
+    margin: -50px 0 0 10px;
+  }
+}
+.videoList .listBox .title {
+  color: #2D2D2C;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 50px 0 0;
+}
+@media screen and (max-width: 991px) {
+  .videoList .listBox .title {
+    padding: 10px 0 0;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .videoList .listBox .title {
+    font-size: 1.125rem;
+  }
+}
+.videoList .listBox .more {
+  line-height: 1;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFF;
+  background: #041c5a;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 20px;
+}
+@media screen and (max-width: 991px) {
+  .videoList .listBox .more {
+    order: -1;
+    margin: 0 0 0 auto;
+  }
+}
+.videoList .listBox .more::after {
+  content: "";
+  width: 46px;
+  aspect-ratio: 1;
+  display: block;
+  margin: 0 0 0 20px;
+  -webkit-mask: url("../images/icon/icon_play.svg") center no-repeat;
+          mask: url("../images/icon/icon_play.svg") center no-repeat;
+  background: #FFF;
+}/*# sourceMappingURL=video.css.map */

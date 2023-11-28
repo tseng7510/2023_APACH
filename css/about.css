@@ -1,0 +1,217 @@
+.about {
+  background: url("../images/in/milestone_bg.jpg") center top no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about .block1 {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .about .block1 {
+    flex-direction: column;
+    margin: 0 0 30px;
+  }
+}
+.about .block1 .description {
+  width: 50%;
+  padding: 0 40px 0 0;
+  max-width: 630px;
+  font-size: 1.3125rem;
+  color: #2C2C2C;
+  margin: 0 0 30px;
+}
+@media screen and (max-width: 991px) {
+  .about .block1 .description {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about .block1 .description {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .about .block1 .description {
+    font-size: 1rem;
+  }
+}
+.about .block1 .description span {
+  color: #db002d;
+  font-weight: bold;
+}
+.about .block1 .picBox {
+  width: 50%;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .about .block1 .picBox {
+    width: 100%;
+  }
+}
+.about .block1 .picBox .pic {
+  opacity: 0;
+  transition: all 1s ease;
+}
+.about .block1 .picBox .pic:first-child {
+  width: 68%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20%, -20%);
+}
+.about .block1 .picBox .pic:last-child {
+  width: 85%;
+  margin: 0 0 0 auto;
+  transform: translate(-20%, 20%);
+}
+.about .block1 .picBox .pic img {
+  width: auto;
+}
+.about .block1 .picBox.animated .pic {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.about .block2 {
+  background: #041C5A;
+  margin: 0 0 5%;
+}
+.about .block2 .pic {
+  margin: 0 0 -10%;
+}
+@media screen and (max-width: 767px) {
+  .about .block2 .pic {
+    margin: 0 0 -5%;
+  }
+}
+.about .block2 .infoBox {
+  color: #FFF;
+  padding: 55px 60px;
+  -webkit-clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 35%, 100% 100%, 0% 100%);
+  background: url("../images/in/about_04.jpg") center top no-repeat;
+}
+@media screen and (max-width: 991px) {
+  .about .block2 .infoBox {
+    -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .about .block2 .infoBox {
+    padding: 70px 40px;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+  }
+}
+.about .block2 .infoBox .logo_in {
+  margin: 0 0 30px;
+}
+.about .block2 .infoBox .logo_in img {
+  height: 50px;
+  filter: grayscale(1) brightness(1000);
+}
+.about .block2 .infoBox .title {
+  font-size: 2.875rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 15px;
+}
+@media screen and (max-width: 991px) {
+  .about .block2 .infoBox .title {
+    font-size: 1.875rem;
+    margin: 0 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about .block2 .infoBox .title {
+    font-size: 1.75rem;
+  }
+}
+.about .block2 .infoBox .description {
+  font-size: 1.3125rem;
+}
+@media screen and (max-width: 991px) {
+  .about .block2 .infoBox .description {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about .block2 .infoBox .description {
+    font-size: 1rem;
+  }
+}
+.about .block2 .infoBox .description ul li {
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.about .block2 .infoBox .description ul li + li {
+  margin: 10px 0 0;
+}
+.about .block2 .infoBox .description ul li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 100%;
+  border: 3px solid #fff;
+  left: 0;
+  top: 12px;
+}
+@media screen and (max-width: 991px) {
+  .about .block2 .infoBox .description ul li::before {
+    top: 8px;
+  }
+}
+.about .block3 {
+  color: #041c5a;
+}
+.about .block3 .title {
+  font-size: 2.875rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+@media screen and (max-width: 991px) {
+  .about .block3 .title {
+    font-size: 1.875rem;
+    margin: 0 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about .block3 .title {
+    font-size: 1.75rem;
+  }
+}
+.about .block3 .description {
+  font-size: 1.3125rem;
+}
+@media screen and (max-width: 991px) {
+  .about .block3 .description {
+    font-size: 1rem;
+  }
+}
+.about .block3 .description ul li {
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.about .block3 .description ul li + li {
+  margin: 10px 0 0;
+}
+.about .block3 .description ul li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 100%;
+  border: 3px solid #db002d;
+  left: 0;
+  top: 12px;
+}
+@media screen and (max-width: 991px) {
+  .about .block3 .description ul li::before {
+    top: 8px;
+  }
+}/*# sourceMappingURL=about.css.map */

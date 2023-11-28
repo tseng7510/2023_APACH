@@ -1,0 +1,229 @@
+.responsibility {
+  background: url("../images/in/milestone_bg.jpg") center top no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.responsibility .pageTitle {
+  margin-bottom: 5%;
+}
+.responsibility .block1 {
+  margin: 0 0 12%;
+}
+.responsibility .block1 .item {
+  display: flex;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+  background: #FFF;
+  border-radius: 200px 0 0 200px;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block1 .item {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 !important;
+    margin: 200px 0 80px !important;
+  }
+}
+.responsibility .block1 .item:nth-child(odd) {
+  margin: 100px 0 0 35px;
+}
+.responsibility .block1 .item:first-child {
+  margin: 0 0 0 35px;
+}
+.responsibility .block1 .item:nth-child(even) {
+  margin: 100px 35px 0 0;
+  border-radius: 0 200px 200px 0;
+}
+.responsibility .block1 .item:nth-child(even) .description {
+  padding: 0 220px 0 80px;
+  margin: 0 -126px 0 0;
+}
+.responsibility .block1 .item:nth-child(even) .pic {
+  order: 5;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block1 .item:nth-child(even) .pic {
+    order: -1;
+    margin: 0 0 50px;
+  }
+}
+.responsibility .block1 .item .pic {
+  width: 253px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0px 17px rgba(4, 28, 90, 0.15), 0 0 0px 35px rgba(4, 28, 90, 0.15);
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block1 .item .pic {
+    margin: -126px 0 30px !important;
+  }
+}
+.responsibility .block1 .item .pic img {
+  border-radius: 100%;
+}
+.responsibility .block1 .description {
+  padding: 0 80px 0 220px;
+  margin: 0 0 0 -126px;
+  font-size: 1.3125rem;
+  color: #2C2C2C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block1 .description {
+    font-size: 1.125rem;
+    padding: 30px !important;
+    margin: 0 0 0 !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  .responsibility .block1 .description {
+    font-size: 1rem;
+  }
+}
+.responsibility .block1 .description span {
+  color: #db002d;
+  font-weight: bold;
+}
+.responsibility .block2 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block2 {
+    flex-direction: column;
+  }
+}
+.responsibility .block2 > .pic {
+  max-width: 650px;
+  width: 50%;
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block2 > .pic {
+    width: 100%;
+  }
+}
+.responsibility .block2 > .pic::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 112px;
+  background: url("../images/in/responsibility_top.png") center no-repeat;
+  background-size: contain;
+  display: block;
+  transform: translate(-40%, 50%);
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block2 > .pic::before {
+    width: 50px;
+    height: 50px;
+  }
+}
+.responsibility .block2 .infoBox {
+  width: 50%;
+  padding: 40px 0 0 5%;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block2 .infoBox {
+    width: 100%;
+    padding: 40px 0 0 0;
+  }
+}
+.responsibility .block2 .infoBox .title {
+  font-size: 2.875rem;
+  font-weight: bold;
+  color: #041c5a;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block2 .infoBox .title {
+    font-size: 1.875rem;
+    margin: 0 0 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .responsibility .block2 .infoBox .title {
+    font-size: 1.75rem;
+  }
+}
+.responsibility .block2 .infoBox .description {
+  color: #2C2C2C;
+  margin: 0 0 40px;
+  font-size: 1.3125rem;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block2 .infoBox .description {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .responsibility .block2 .infoBox .description {
+    font-size: 1rem;
+  }
+}
+.responsibility .block2 .infoBox .pic {
+  max-width: 620px;
+}
+.responsibility .block3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  padding: 0 0 10%;
+}
+.responsibility .block3::before {
+  content: "";
+  position: absolute;
+  background: url("../images/in/responsibility_bg2.png") bottom left no-repeat;
+  background-size: contain;
+  display: block;
+  width: 25%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+@media screen and (max-width: 767px) {
+  .responsibility .block3::before {
+    width: 100%;
+    opacity: 0.7;
+    transform: translate(50%, 50%);
+  }
+}
+.responsibility .block3 .bg {
+  position: absolute;
+  text-align: center;
+  z-index: -1;
+  top: -60%;
+}
+.responsibility .block3 .bg img {
+  max-width: none;
+  width: 1592px !important;
+  height: 903px !important;
+}
+.responsibility .block3 .description {
+  max-width: 830px;
+  text-align: center;
+  color: #FFF;
+  z-index: 9;
+  font-size: 1.3125rem;
+  padding: 5% 20px;
+}
+@media screen and (max-width: 991px) {
+  .responsibility .block3 .description {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .responsibility .block3 .description {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=responsibility.css.map */
