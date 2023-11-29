@@ -5,38 +5,35 @@
       <ul class="selectBox">
         <li>
           <div class="inputItem">
-            <input type="text" class="inputControl" id="name" placeholder="Product">
+            <select name="">
+              <option value="">New Products</option>
+              <option value="">Air Pneumatic Tools</option>
+              <option value="">Hand Tools</option>
+            </select>
           </div>
-          <ul class="list">
-            <li>New Products</li>
-            <li>Air Pneumatic Tools</li>
-            <li>Hand Tools</li>
-          </ul>
         </li>
         <li>
           <div class="inputItem">
-            <input type="text" class="inputControl" id="name" placeholder="Hand Sockets">
+            <select name="">
+              <option value="">Hand Sockets</option>
+              <option value="">Torque Wrench</option>
+              <option value="">Wrenches</option>
+              <option value="">Patent Socket Wrench Set</option>
+              <option value="">Ratchet Wrench Socket Tools Set</option>
+              <option value="">Replaceable Hammer</option>
+              <option value="">Power Tool Accessories</option>
+              <option value="">Hand Tool Accessories</option>
+            </select>
           </div>
-          <ul class="list">
-            <li>Hand Sockets</li>
-            <li>Torque Wrench</li>
-            <li>Wrenches</li>
-            <li>Patent Socket Wrench Set</li>
-            <li>Ratchet Wrench Socket Tools Set</li>
-            <li>Replaceable Hammer</li>
-            <li>Power Tool Accessories</li>
-            <li>Hand Tool Accessories</li>
-          </ul>
         </li>
         <li>
           <div class="inputItem">
-            <input type="text" class="inputControl" id="name" placeholder="1/4” Hand Socket">
+            <select name="">
+              <option value="">1/4” Hand Socket</option>
+              <option value="">3/8” Hand Socket</option>
+              <option value="">1/2” Hand Socket</option>
+            </select>
           </div>
-          <ul class="list">
-            <li>1/4” Hand Socket</li>
-            <li>3/8” Hand Socket</li>
-            <li>1/2” Hand Socket</li>
-          </ul>
         </li>
       </ul>
     </form>

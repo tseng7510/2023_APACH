@@ -243,6 +243,8 @@
   position: absolute;
   inset: 0;
   z-index: 9;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (max-width: 767px) {
   .productsSearchBox .mobileSearchBtn {
@@ -335,21 +337,31 @@
   border-color: transparent transparent #db002d transparent;
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 15px;
   transform: translateY(-50%);
 }
-.productsSearchBox .searchForm .inputItem input {
+.productsSearchBox .searchForm .inputItem input,
+.productsSearchBox .searchForm .inputItem select {
   color: #fff;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   height: 43px;
-  padding: 10px 30px 10px 10px;
+  padding: 10px 40px 10px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-.productsSearchBox .searchForm .inputItem input::-moz-placeholder {
+
+.productsSearchBox .searchForm .inputItem select::-ms-expand {
+  display: none;
+}
+.productsSearchBox .searchForm .inputItem input::-moz-placeholder,
+.productsSearchBox .searchForm .inputItem select::-moz-placeholder {
   color: #fff;
 }
-.productsSearchBox .searchForm .inputItem input::placeholder {
+.productsSearchBox .searchForm .inputItem input::placeholder,
+.productsSearchBox .searchForm .inputItem select::placeholder {
   color: #fff;
 }
 .productsSearchBox .searchForm .list {
