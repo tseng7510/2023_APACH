@@ -105,28 +105,46 @@
         <section class="newsBox">
           <div class="container">
             <div class="titleBox wow fadeInUp" data-wow-delay="0.2s">
-              <h2 class="unitTitle">News & Exhibition</h2>
+              <div class="unitTitle">News & Exhibition</div>
             </div>
             <div class="listBox wow fadeInUp" data-wow-delay="0.4s">
 
-
-              <? for ($i = 0; $i < 2; $i++) { ?>
-                <div class="item">
-                  <a href="news_detail.php">
+              <div class="item">
+                <a href="news_detail.php">
+                  <div class="pic"><img src="../images/in/news.jpg" alt=""></div>
+                  <div class="timeBox">
                     <time>
-                      <div class="date">2022<span>JUN</span></div>
-                      <div class="day">10</div>
+                      <div class="date">2023.12.05</div>
                     </time>
                     <div class="tag">EXHIBITION</div>
-                    <div class="description">The Automotive Aftermarket Products Expo (AAPEX) November 1-3, Las Vegas<br />
-                      Location:The Venetian EXPO<br />
+                  </div>
+                  <div class="info">
+                    <div class="title">The Automotive Aftermarket Products Expo (AAPEX) November 1-3, Las Vegas</div>
+                    <div class="description">Location:The Venetian EXPO<br />
                       Date: November 1-3,2022<br />
                       Booth：A668<br />
                       Website: https://www.aapexshow.com/</div>
-                  </a>
-                </div>
-              <? } ?>
-
+                  </div>
+                </a>
+              </div>
+              <div class="item">
+                <a href="news_detail.php">
+                  <div class="pic"><img src="../images/in/news.jpg" alt=""></div>
+                  <div class="timeBox">
+                    <time>
+                      <div class="date">2023.12.05</div>
+                    </time>
+                    <div class="tag">EXHIBITION</div>
+                  </div>
+                  <div class="info">
+                    <div class="title">The Automotive Aftermarket Products Expo (AAPEX) November 1-3, Las Vegas</div>
+                    <div class="description">Location:The Venetian EXPO<br />
+                      Date: November 1-3,2022<br />
+                      Booth：A668<br />
+                      Website: https://www.aapexshow.com/</div>
+                  </div>
+                </a>
+              </div>
 
             </div>
             <a href="#" class="indexMore">LEARN MORE</a>
@@ -245,30 +263,28 @@
       })
     })
 
-    (function() {
-      const count11 = document.querySelector('.countBox .count1 span');
-      const count12 = document.querySelector('.countBox .count2 span');
-      const count13 = document.querySelector('.countBox .count3 span');
-      const check = document.querySelector('.countBox');
-      const options = {
-        root: null,
-        rootMargin: '0px 0px 0px 0px',
-        threshold: 0.2,
-      };
-      const callback = (entries, observer) => {
-        if (entries[0].isIntersecting && !check.classList.contains('active')) {
-          check.classList.add('active');
-          setTimeout(() => {
-            animateNumber(count11, 0, 30, 2000);
-            animateNumber(count12, 0, 15000, 2000);
-            animateNumber(count13, 0, 140, 2000);
-          }, 500);
-        }
-      };
+    const count11 = document.querySelector('.countBox .count1 span');
+    const count12 = document.querySelector('.countBox .count2 span');
+    const count13 = document.querySelector('.countBox .count3 span');
+    const check = document.querySelector('.countBox');
+    const options = {
+      root: null,
+      rootMargin: '0px 0px 0px 0px',
+      threshold: 0.2,
+    };
+    const callback = (entries, observer) => {
+      if (entries[0].isIntersecting && !check.classList.contains('active')) {
+        check.classList.add('active');
+        setTimeout(() => {
+          animateNumber(count11, 0, 30, 2000);
+          animateNumber(count12, 0, 15000, 2000);
+          animateNumber(count13, 0, 140, 2000);
+        }, 500);
+      }
+    };
 
-      const observer = new IntersectionObserver(callback, options);
-      observer.observe(check);
-    })()
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(check);
   </script>
 </body>
 
