@@ -1,4 +1,4 @@
-<div class="privacyBox">我This site uses cookies to improve your browsing experience. we'll assume you're OK to continue. If you want to read more about this, please chick <a target="_blank" href="disclaimer.php"> PRIVACY </a> thank you.<div class="closePrivacy">Confirm</div>
+<div class="privacyBox">This site uses cookies to improve your browsing experience. we'll assume you're OK to continue. If you want to read more about this, please chick <a target="_blank" href="disclaimer.php"> PRIVACY </a> thank you.<div class="closePrivacy">Confirm</div>
 </div>
 <div class="floatNav">
   <button type="button" class="goTop"></button>

@@ -52,19 +52,19 @@
           <div class="listBox">
             <div class="item wow fadeInRight" data-wow-delay="0.0s">
               <div class="count count1">
-                <span>30</span>
+                <span></span>
               </div>
               <div class="title">Years History</div>
             </div>
             <div class="item wow fadeInRight" data-wow-delay="0.2s">
               <div class="count count2">
-                <span>15000</span>
+                <span></span>
               </div>
               <div class="title">Core Capacity tools/month</div>
             </div>
             <div class="item wow fadeInRight" data-wow-delay="0.4s">
               <div class="count count3">
-                <span>140</span>
+                <span></span>
               </div>
               <div class="title">Sales Country</div>
             </div>
@@ -266,7 +266,7 @@
     const count11 = document.querySelector('.countBox .count1 span');
     const count12 = document.querySelector('.countBox .count2 span');
     const count13 = document.querySelector('.countBox .count3 span');
-    const check = document.querySelector('.countBox');
+    const check = document.querySelector('.countBox .listBox');
     const options = {
       root: null,
       rootMargin: '0px 0px 0px 0px',

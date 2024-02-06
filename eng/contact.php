@@ -35,13 +35,10 @@
               </div>
             </div>
 
-            <div class="mapBox wow fadeInUp" data-wow-delay="0.4s"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14568.093082612428!2d120.7120595!3d24.1006771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34692332d314be3f%3A0xfdee39d0a47801cb!2sAPACH%20INDUSTRIAL%20CO.%2C%20LTD.!5e0!3m2!1szh-TW!2stw!4v1699529676806!5m2!1szh-TW!2stw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-              <div class="notice">Please fill in the following fields. We will contact you immediately after receipt.</div>
-            </div>
 
             <div class="container">
 
+              <div class="notice">Please fill in the following fields. We will contact you immediately after receipt.</div>
               <form class="formBox wow fadeInLeft" data-wow-delay="0.2s">
                 <ul>
                   <li class="inputItem full wow fadeInUp required">
@@ -80,6 +77,10 @@
                   <button class="send" type="button" onclick="javascript:location.href='contact_ok.php'">SEND MESSAGE</button>
                 </div>
               </form>
+            </div>
+
+            <div class="mapBox wow fadeInUp" data-wow-delay="0.4s"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14568.093082612428!2d120.7120595!3d24.1006771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34692332d314be3f%3A0xfdee39d0a47801cb!2sAPACH%20INDUSTRIAL%20CO.%2C%20LTD.!5e0!3m2!1szh-TW!2stw!4v1699529676806!5m2!1szh-TW!2stw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
 
 
