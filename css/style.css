@@ -550,6 +550,7 @@ button:focus {
   background: #000;
   z-index: 9999;
   bottom: 0px;
+  left: 0;
   width: 100%;
   color: #e7e7e7;
   padding: 20px;
@@ -691,7 +692,8 @@ button:focus {
   transform: translateX(-40%);
   -webkit-clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
   clip-path: polygon(50% 0%, 100% 0%, 50% 100%, 0% 100%);
-  background: #db002d;
+  background: linear-gradient(to bottom, rgba(218, 0, 44, 1) 40%, rgba(218, 0, 44, 0) 90%);
+
   line-height: 1.45;
 }
 @media screen and (max-width: 767px) {

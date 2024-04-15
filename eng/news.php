@@ -24,60 +24,52 @@
         </div>
       </div>
 
-      <div class="pageNav">
-        <div class="container">
-          <ul>
-            <li class="active"><a href="#">NEW</a></li>
-            <li><a href="#">EXHIBITION</a></li>
-          </ul>
-        </div>
-      </div>
-
       <div class="mainBox">
 
         <div class="newsList">
           <div class="pageContent">
             <div class="container">
+              <div class="side wow fadeInLeft" data-wow-delay="0s">
+                <div class="box">
+                  <div class="pageTitle">Media</div>
+                  <button type="button">MENU</button>
+                  <ul>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">EXHIBITION</a></li>
+                    <li><a href="#">VIDEO</a></li>
+                    <li><a href="#">BROCHURE</a></li>
+                    <li><a href="#">BLOG</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content">
+                <div class="listBox wow fadeInUp" data-wow-delay="0.2s">
 
-              <div class="listBox wow fadeInUp" data-wow-delay="0.4s">
-
-                <? for ($i = 0; $i < 9; $i++) { ?>
-                  <div class="item">
-                    <a href="news_detail.php">
-                      <div class="pic"><img src="../images/in/news.jpg" alt=""></div>
-                      <time>
-                        <div class="date">2022<span>JUN</span></div>
-                        <div class="day">10</div>
-                      </time>
-                      <div class="info">
-                        <h2 class="title">The Automotive Aftermarket Products Expo (AAPEX) November 1-3, Las Vegas</h2>
-                        <div class="description">
-                          Location:The Venetian EXPO<br />
-                          Date: November 1-3,2022<br />
-                          Booth：A668<br />
-                          Website: https://www.aapexshow.com/
+                  <? for ($i = 0; $i < 9; $i++) { ?>
+                    <div class="item">
+                      <a href="news_detail.php">
+                        <div class="pic"><img src="../images/in/news.jpg" alt=""></div>
+                        <div class="top">
+                          <time>2023.12.05</time>
+                          <div class="tag">NEWS</div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
-                <? } ?>
+                        <div class="info">
+                          <h2 class="title">The Automotive Aftermarket Products Expo (AAPEX) November 1-3, Las Vegas</h2>
+                          <div class="description">
+                            Location:The Venetian EXPO<br />
+                            Date: November 1-3,2022<br />
+                            Booth：A668<br />
+                            Website: https://www.aapexshow.com/
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  <? } ?>
 
+                </div>
               </div>
             </div>
 
-            <div class="pageBox wow fadeInUp" data-wow-delay="0.2s">
-              <div class="container">
-                <ul class="pagination">
-                  <li class="controls"><a class="prev" href="#" title="Previous"></a></li>
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li class="active"><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li class="controls"><a class="next" href="#" title="Next"></a></li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -112,6 +104,13 @@
     <?php include('include_footer.php'); ?>
   </div>
   <?php include('include_body_bottom.php'); ?>
+  <script>
+    $(function() {
+      $('.side button').on('click', function() {
+        $('.side ul').slideToggle('fast');
+      })
+    })
+  </script>
 </body>
 
 </html>

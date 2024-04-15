@@ -60,7 +60,7 @@
               <meta itemprop="position" content="2">
             </li>
             <li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem">
-              <span itemprop="name">News</span>
+              <span itemprop="name">exhibition</span>
               <meta itemprop="position" content="3">
             </li>
           </ul>

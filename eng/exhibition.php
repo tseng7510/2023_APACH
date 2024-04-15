@@ -19,7 +19,7 @@
         <div class="pic"><img src="../images/in/banner_media.jpg" alt=""></div>
         <div class="unitTitleBox">
           <div class="container">
-            <h1 class="title wow fadeInUp" data-wow-delay="0s">TECHNICAL BLOG</h1>
+            <h1 class="title wow fadeInUp" data-wow-delay="0s">EXHIBITION</h1>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
 
                   <? for ($i = 0; $i < 9; $i++) { ?>
                     <div class="item">
-                      <a href="blog_detail.php">
+                      <a href="exhibition_detail.php">
                         <div class="pic"><img src="../images/in/news.jpg" alt=""></div>
                         <div class="top">
                           <time>2023.12.05</time>
@@ -91,7 +91,7 @@
               <meta itemprop="position" content="2">
             </li>
             <li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem">
-              <span itemprop="name">Blog</span>
+              <span itemprop="name">Exhibition</span>
               <meta itemprop="position" content="3">
             </li>
           </ul>

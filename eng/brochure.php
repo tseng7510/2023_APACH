@@ -15,81 +15,74 @@
 
 
     <main class="siteMain innerPage" aria-label="main" itemscope>
-      <div class="inBanner">
-        <div class="pic"><img src="../images/in/banner_brochure.jpg" alt=""></div>
-        <div class="unitTitleBox">
-          <div class="container">
-            <h1 class="title wow fadeInUp" data-wow-delay="0s">CATALOGUE</h1>
-          </div>
-        </div>
-      </div>
-
-      <div class="pageNav">
-        <div class="container">
-          <ul>
-            <li><a href="#block1">Pneumatic Nailers and Staplers </a></li>
-            <li><a href="#block2">Air Tools</a></li>
-            <li><a href="#block3">Hand Tools</a></li>
-          </ul>
-        </div>
-      </div>
 
       <div class="mainBox">
 
         <div class="brochureList">
           <div class="pageContent">
-            <div class="container" id="block1">
-
-              <div class="listTitle wow fadeInUp" data-wow-delay="0s">Pneumatic Nailers and Staplers</div>
-              <div class="listBox">
-
-                <? for ($i = 0; $i < 9; $i++) { ?>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="../images/in/brochure.jpg" alt=""></div>
-                      <h2 class="title">APACH-2018 Chinese Catalog</h2>
-                      <div class="download">Download</div>
-                    </a>
+            <div class="container">
+              <div class="side wow fadeInUp" data-wow-delay="0s">
+                <div class="pageTitle">Catalogue</div>
+                <div class="tab">
+                  <button type="button">Pneumatic Nailers and Staplers</button>
+                  <button type="button">Air Tools</button>
+                  <button type="button">Hand Tools</button>
+                </div>
+                <div class="controlBox">
+                  <div class="control block1">
+                    <div class="page"></div>
+                    <div class="arrowBox"></div>
                   </div>
-                <? } ?>
+                  <div class="control block2">
+                    <div class="page"></div>
+                    <div class="arrowBox"></div>
+                  </div>
+                  <div class="control block3">
+                    <div class="page"></div>
+                    <div class="arrowBox"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="contentBox wow fadeInUp" data-wow-delay="0.2s">
+                <div class="content block1">
+                  <div class="listBox">
+                    <?php for ($i = 0; $i < 6; $i++) { ?>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="../images/in/brochure.jpg" alt=""></div>
+                          <h2 class="title">APACH-2018 Chinese Catalog</h2>
+                        </a>
+                      </div>
+                    <?php } ?>
+                  </div>
+                </div>
+                <div class="content block2">
+                  <div class="listBox">
+                    <?php for ($i = 0; $i < 5; $i++) { ?>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="../images/in/brochure.jpg" alt=""></div>
+                          <h2 class="title">2APACH-2018 Chinese Catalog</h2>
+                        </a>
+                      </div>
+                    <?php } ?>
+                  </div>
+                </div>
+                <div class="content block3">
+                  <div class="listBox">
+                    <?php for ($i = 0; $i < 4; $i++) { ?>
+                      <div class="item">
+                        <a href="#">
+                          <div class="pic"><img src="../images/in/brochure.jpg" alt=""></div>
+                          <h2 class="title">3APACH-2018 Chinese Catalog</h2>
+                        </a>
+                      </div>
+                    <?php } ?>
+                  </div>
+                </div>
 
               </div>
             </div>
-            <div class="container" id="block2">
-
-              <div class="listTitle wow fadeInUp" data-wow-delay="0s">Air Tools</div>
-              <div class="listBox wow fadeInUp" data-wow-delay="0.2s">
-
-                <? for ($i = 0; $i < 9; $i++) { ?>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="../images/in/brochure.jpg" alt=""></div>
-                      <div class="title">APACH-2018 Chinese Catalog</div>
-                      <div class="download">Download</div>
-                    </a>
-                  </div>
-                <? } ?>
-
-              </div>
-            </div>
-            <div class="container" id="block3">
-
-              <div class="listTitle wow fadeInUp" data-wow-delay="0s">Hand Tools</div>
-              <div class="listBox wow fadeInUp" data-wow-delay="0.2s">
-
-                <? for ($i = 0; $i < 9; $i++) { ?>
-                  <div class="item">
-                    <a href="#">
-                      <div class="pic"><img src="../images/in/brochure.jpg" alt=""></div>
-                      <div class="title">APACH-2018 Chinese Catalog</div>
-                      <div class="download">Download</div>
-                    </a>
-                  </div>
-                <? } ?>
-
-              </div>
-            </div>
-
           </div>
         </div>
 
@@ -109,7 +102,7 @@
               <meta itemprop="position" content="2">
             </li>
             <li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem">
-              <span itemprop="name">News</span>
+              <span itemprop="name">Brochure</span>
               <meta itemprop="position" content="3">
             </li>
           </ul>
@@ -123,33 +116,63 @@
   </div>
   <?php include('include_body_bottom.php'); ?>
   <script>
-    $('.pageNav li').off().on('click', function() {
-      $('.pageNav li').removeClass('active');
-      $(this).addClass('active');
-    })
-
-    const nav = document.querySelectorAll('.pageNav li');
-    const check = document.querySelectorAll('.brochureList .container');
-    const options = {
-      root: null,
-      rootMargin: '0px 0px 0px 0px',
-      threshold: 0.2,
-    };
-    const callback = (entries, observer) => {
-      if (entries[0].isIntersecting) {
-        entries[0].target.classList.add("active");
-        nav.forEach(v => v.classList.remove("active"));
-        check.forEach((v, i) => {
-          if (v === entries[0].target) {
-            nav[i].classList.add("active")
-            navBox.scrollLeft = navScroll[i];
-          }
+    $(function() {
+      $('.brochureList .contentBox .listBox').each(function(i) {
+        $(this).slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+          dots: false,
+          appendArrows: `.brochureList .controlBox .block${i + 1} .arrowBox`,
+          prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" title="Previous"></button>',
+          nextArrow: '<button class="slick-next" aria-label="Next" type="button" title="Next"></button>',
+          responsive: [{
+              breakpoint: 1440,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 1000,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
+            {
+              breakpoint: 550,
+              settings: {
+                slidesToShow: 2,
+              }
+            }
+          ],
         })
-      }
-    };
+      })
+    });
 
-    const observer = new IntersectionObserver(callback, options);
-    check.forEach(item => observer.observe(item))
+    $('.brochureList .contentBox .listBox').each(function(i) {
+      $(this).on('init beforeChange', function(event, slick, currentSlide, nextSlide) {
+        let allItem = (slick.slideCount + 1 < 10 ? '0' : '') + slick.slideCount;
+        let currentSlide1 = (nextSlide == undefined) ? '1' : nextSlide + 1;
+        let slideNow = (currentSlide1 < 10 ? '0' : '') + currentSlide1;
+        $(`.brochureList .controlBox .block${i + 1} .page`).html('<span>' + slideNow + '</span>' + ' / ' + allItem);
+      });
+    });
+
+    $('.brochureList .tab button').eq(0).addClass('active');
+    $('.brochureList .contentBox .content').eq(0).addClass('active');
+    $('.brochureList .controlBox .control').eq(0).addClass('active');
+    $('.tab button').on('click', function() {
+      $(this).siblings().removeClass('active');
+      $(this).toggleClass('active');
+      console.log($(this).index());
+      $('.brochureList .contentBox .content').eq($(this).index()).siblings().removeClass('active');
+      $('.brochureList .contentBox .content').eq($(this).index()).addClass('active');
+      $('.brochureList .contentBox .listBox').each(function(i) {
+        $(this).slick('refresh')
+      })
+      $('.brochureList .controlBox .control').eq($(this).index()).siblings().removeClass('active');
+      $('.brochureList .controlBox .control').eq($(this).index()).addClass('active');
+    })
   </script>
 </body>
 

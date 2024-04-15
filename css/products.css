@@ -944,4 +944,30 @@
 .productsDetail .content .description .iconBox .item .t {
   color: #2e2e2d;
   font-weight: 600;
-} /*# sourceMappingURL=products.css.map */
+}
+
+.tagBox {
+  padding: 10px;
+  background: #9ba0d6;
+  margin-bottom: 30px;
+}
+.tagBox ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tagBox ul li {
+  white-space: nowrap;
+}
+.tagBox ul li a {
+  display: block;
+  padding: 5px 10px;
+  color: #000;
+  background: #fff;
+}
+.tagBox ul li.active a,
+.tagBox ul li a:hover {
+  color: #fff;
+  background: #041c5a;
+}
+/*# sourceMappingURL=products.css.map */

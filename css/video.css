@@ -1,86 +1,189 @@
-.videoList .listBox {
+.innerPage .pageContent {
+  padding: 6% 0;
+}
+
+.videoList {
+  background: url("../images/in/brochure_bg.jpg") left top no-repeat;
+}
+.videoList .container {
+  max-width: 1770px;
+  padding-right: 0;
+  margin: 0 0 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 70px 40px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 991px) {
-  .videoList .listBox {
-    gap: 50px 30px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .videoList .listBox {
-    gap: 40px 20px;
-  }
-}
-.videoList .listBox .item {
-  width: calc((100% - 40px) / 2);
-}
-@media screen and (max-width: 991px) {
-  .videoList .listBox .item {
-    width: calc((100% - 30px) / 2);
-  }
-}
-@media screen and (max-width: 767px) {
-  .videoList .listBox .item {
+  .videoList .container {
     width: 100%;
   }
 }
-.videoList .listBox .info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  z-index: 9;
-  margin: -30px 0 0 10px;
-}
-@media screen and (max-width: 991px) {
-  .videoList .listBox .info {
+@media screen and (max-width: 550px) {
+  .videoList .container {
     flex-direction: column;
-    margin: -50px 0 0 10px;
+    padding-right: 20px;
   }
 }
-.videoList .listBox .title {
-  color: #2D2D2C;
-  font-size: 1.5rem;
-  font-weight: 800;
-  padding: 50px 0 0;
+.videoList .side {
+  width: 30%;
+  max-width: 464px;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 991px) {
-  .videoList .listBox .title {
-    padding: 10px 0 0;
-    font-size: 1.25rem;
+  .videoList .side {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .videoList .side {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .videoList .side .tab {
+    margin-bottom: 30px;
+  }
+}
+.videoList .side .tab button {
+  width: 100%;
+  color: #222222;
+  background: none;
+  padding: 35px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: left;
+}
+@media screen and (max-width: 550px) {
+  .videoList .side .tab button {
+    padding: 15px 0;
+  }
+}
+.videoList .side .tab button.active, .videoList .side .tab button:hover {
+  background: #DB002D;
+  color: #FFF;
+  padding: 35px 25px;
+}
+@media screen and (max-width: 550px) {
+  .videoList .side .tab button.active, .videoList .side .tab button:hover {
+    padding: 15px 25px;
+  }
+}
+.videoList .side .pageTitle {
+  color: #444444;
+  margin-bottom: 90px;
+  font-size: 4.25rem;
+}
+@media screen and (max-width: 991px) {
+  .videoList .side .pageTitle {
+    font-size: 3.375rem;
+    margin-bottom: 60px;
   }
 }
 @media screen and (max-width: 767px) {
-  .videoList .listBox .title {
-    font-size: 1.125rem;
+  .videoList .side .pageTitle {
+    font-size: 2.5rem;
+    width: calc(100% + 20px);
   }
 }
-.videoList .listBox .more {
-  line-height: 1;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #FFF;
-  background: #041c5a;
+.videoList .side .controlBox {
+  margin: auto 0 0;
+  padding-right: 30px;
+}
+@media screen and (max-width: 550px) {
+  .videoList .side .controlBox {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+}
+.videoList .side .controlBox .control {
+  width: 100%;
+  display: none;
+}
+.videoList .side .controlBox .control.active {
   display: flex;
-  align-items: center;
-  margin: 0 0 0 20px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.videoList .side .controlBox .control .page {
+  font-size: 1.5rem;
+  color: #878787;
+}
+.videoList .side .controlBox .control .page span {
+  color: #DB002D;
+}
+.videoList .side .controlBox .control button {
+  border: none;
+}
+.videoList .side .controlBox .arrowBox {
+  display: flex;
+  gap: 20px;
 }
 @media screen and (max-width: 991px) {
-  .videoList .listBox .more {
-    order: -1;
-    margin: 0 0 0 auto;
+  .videoList .side .controlBox .arrowBox {
+    gap: 10px;
   }
 }
-.videoList .listBox .more::after {
-  content: "";
-  width: 46px;
-  aspect-ratio: 1;
+.videoList .contentBox {
+  width: 70%;
+  margin-right: -20px;
+  flex-grow: 1;
+}
+@media screen and (max-width: 991px) {
+  .videoList .contentBox {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .videoList .contentBox {
+    width: calc(100% + 20px);
+  }
+}
+.videoList .contentBox .content {
+  display: none;
+}
+.videoList .contentBox .content.active {
   display: block;
-  margin: 0 0 0 20px;
-  -webkit-mask: url("../images/icon/icon_play.svg") center no-repeat;
-          mask: url("../images/icon/icon_play.svg") center no-repeat;
-  background: #FFF;
+}
+.videoList .contentBox .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px 40px;
+}
+@media screen and (max-width: 1100px) {
+  .videoList .contentBox .listBox {
+    gap: 40px 20px;
+  }
+}
+.videoList .contentBox .listBox .item {
+  width: calc((100% - 40px) / 2);
+  padding: 0 20px 0 0;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .videoList .contentBox .listBox .item {
+    width: 100%;
+  }
+}
+.videoList .contentBox .listBox .item .pic {
+  margin-bottom: 20px;
+}
+.videoList .contentBox .listBox .item .title {
+  font-size: 2rem;
+  line-height: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+@media screen and (max-width: 767px) {
+  .videoList .contentBox .listBox .item .title {
+    font-size: 1.625rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .videoList .contentBox .listBox .item .title {
+    font-size: 1.375rem;
+  }
 }/*# sourceMappingURL=video.css.map */

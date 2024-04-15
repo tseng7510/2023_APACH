@@ -31,7 +31,30 @@
           <div class="pageContent ">
             <div class="container">
               <h2 class="titleBox">Air Impact Wrench</h2>
-
+              <div class="tagBox">
+                <ul>
+                  <li class="active"><a href="#">1刃</a></li>
+                  <li><a href="#">2刃</a></li>
+                  <li><a href="#">3刃</a></li>
+                  <li><a href="#">4刃</a></li>
+                  <li><a href="#">多刃</a></li>
+                  <li><a href="#">平刀</a></li>
+                  <li><a href="#">球刀</a></li>
+                  <li><a href="#">圓鼻刀</a></li>
+                  <li><a href="#">微小徑</a></li>
+                  <li><a href="#">深溝刀</a></li>
+                  <li><a href="#">粗銑刀</a></li>
+                  <li><a href="#">石墨刀</a></li>
+                  <li><a href="#">鋁合金專用</a></li>
+                  <li><a href="#">不鏽鋼專用</a></li>
+                  <li><a href="#">Hss 銑刀</a></li>
+                  <li><a href="#">HRC45</a></li>
+                  <li><a href="#">HRC55</a></li>
+                  <li><a href="#">HRC65</a></li>
+                  <li><a href="#">其他刀具系列</a></li>
+                  <li><a href="#">5刃</a></li>
+                </ul>
+              </div>
               <div class="listBox wow fadeInUp" data-wow-delay="0.4s">
 
                 <? for ($i = 0; $i < 12; $i++) { ?>

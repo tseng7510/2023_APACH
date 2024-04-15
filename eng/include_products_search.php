@@ -26,7 +26,7 @@
             </select>
           </div>
         </li>
-        <li>
+        <!-- <li>
           <div class="inputItem">
             <select name="">
               <option value="">1/4” Hand Socket</option>
@@ -34,7 +34,7 @@
               <option value="">1/2” Hand Socket</option>
             </select>
           </div>
-        </li>
+        </li> -->
       </ul>
     </form>
   </div>
