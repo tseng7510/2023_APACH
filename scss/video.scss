@@ -6,41 +6,111 @@
 }
 
 .videoList {
-  background: url('../images/in/brochure_bg.jpg') left top no-repeat;
+  background: #F0F0F0;
+
+  .pageContent {
+    padding-top: 0;
+  }
 
   .container {
+    width: auto;
     max-width: 1770px;
-    padding-right: 0;
-    margin: 0 0 0 auto;
+    margin: 0 auto 0 0;
+    padding: 0;
     display: flex;
-    overflow: hidden;
-    box-sizing: border-box;
+    align-items: flex-start;
+    box-sizing: content-box;
+    padding-right: 80px;
+    isolation: isolate;
 
-    @media screen and (max-width: 991px) {
-      width: 100%;
+    @media screen and (max-width: 1440px) {
+      padding-right: 50px;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 767px) {
       flex-direction: column;
-      padding-right: 20px;
+      padding: 0 20px;
     }
   }
 
   .side {
-    width: 30%;
-    max-width: 464px;
+    position: sticky;
+    top: 80px;
     display: flex;
     flex-direction: column;
+    width: 30%;
+    padding-top: 6%;
+    padding-left: clamp(30px, 8%, 150px);
+
+    @media screen and (max-width: 1440px) {
+      padding-left: 50px;
+    }
 
     @media screen and (max-width: 991px) {
       width: 40%;
     }
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: 767px) {
+      top: 0;
       width: 100%;
+      position: relative;
+      padding-left: 0;
+      padding-top: 39px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: calc(100% + 200px);
+      height: 100vh;
+      top: 0;
+      left: 0;
+      display: block;
+      background: url('../images/in/brochure_bg.jpg') left top no-repeat;
+      z-index: -1;
+
+      @media screen and (max-width: 767px) {
+        left: -20px;
+        width: calc(100% + 40px);
+      }
+    }
+
+
+    .box {
+
+      & > button {
+        width: 100%;
+        background: none;
+        color: #fff;
+        background: #DB002D;
+        padding: 10px;
+        position: relative;
+        display: none;
+
+        @media screen and (max-width: 767px) {
+          display: block;
+        }
+
+        &::after {
+          content: "+";
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+        }
+      }
     }
 
     .tab {
+      @media screen and (min-width: 768px) {
+        display: block !important;
+      }
+
+      @media screen and (max-width: 767px) {
+        max-width: none;
+        display: none;
+      }
+
       @media screen and (max-width: 550px) {
         margin-bottom: 30px;
       }
@@ -54,9 +124,12 @@
         font-weight: 600;
         text-align: left;
 
-        @media screen and (max-width: 550px) {
+        @media screen and (max-width: 767px) {
           padding: 15px 0;
+          background: none;
+          border-bottom: #9E9E9E 1px solid;
         }
+
 
         &.active,
         &:hover {
@@ -64,8 +137,10 @@
           color: #FFF;
           padding: 35px 25px;
 
-          @media screen and (max-width: 550px) {
-            padding: 15px 25px;
+          @media screen and (max-width: 767px) {
+            padding: 15px 0;
+            background: none;
+            color: #DB002D;
           }
         }
       }
@@ -76,14 +151,18 @@
       margin-bottom: 90px;
       font-size: Rem(68);
 
+      @media screen and (max-width: 1440px) {
+        margin-bottom: 60px;
+      }
+
       @media screen and (max-width: 991px) {
         font-size: Rem(54);
-        margin-bottom: 60px;
       }
 
       @media screen and (max-width: 767px) {
         font-size: Rem(40);
-        width: calc(100% + 20px);
+        // width: calc(100% + 20px);
+        margin-bottom: 20px;
       }
     }
 
@@ -133,15 +212,14 @@
 
   .contentBox {
     width: 70%;
-    margin-right: -20px;
-    flex-grow: 1;
+    padding-top: 6%;
 
     @media screen and (max-width: 991px) {
       width: 60%;
     }
 
-    @media screen and (max-width: 550px) {
-      width: calc(100% + 20px);
+    @media screen and (max-width: 767px) {
+      width: 100%;
     }
 
     .content {
@@ -162,11 +240,10 @@
       }
 
       .item {
-        width: calc((100% - 40px)/2);
-        padding: 0 20px 0 0;
+        width: calc((100% - 40px) / 2);
         position: relative;
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 767px) {
           width: 100%;
         }
 

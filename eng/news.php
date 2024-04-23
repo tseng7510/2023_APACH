@@ -29,19 +29,7 @@
         <div class="newsList">
           <div class="pageContent">
             <div class="container">
-              <div class="side wow fadeInLeft" data-wow-delay="0s">
-                <div class="box">
-                  <div class="pageTitle">Media</div>
-                  <button type="button">MENU</button>
-                  <ul>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">EXHIBITION</a></li>
-                    <li><a href="#">VIDEO</a></li>
-                    <li><a href="#">BROCHURE</a></li>
-                    <li><a href="#">BLOG</a></li>
-                  </ul>
-                </div>
-              </div>
+              <?php include('include_media.php'); ?>
               <div class="content">
                 <div class="listBox wow fadeInUp" data-wow-delay="0.2s">
 
@@ -66,6 +54,17 @@
                     </div>
                   <? } ?>
 
+                </div>
+                <div class="pageBox wow fadeInUp" data-wow-delay="0.2s">
+                  <ul class="pagination">
+                    <li class="controls"><a class="prev" href="#" title="Previous"></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="active"><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li class="controls"><a class="next" href="#" title="Next"></a></li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -106,9 +105,10 @@
   <?php include('include_body_bottom.php'); ?>
   <script>
     $(function() {
-      $('.side button').on('click', function() {
+      $('.side .sideMenuBtn').on('click', function() {
         $('.side ul').slideToggle('fast');
-      })
+      });
+      $('.side ul li').eq(0).addClass('active');
     })
   </script>
 </body>

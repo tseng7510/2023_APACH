@@ -30,8 +30,13 @@
     box-sizing: content-box;
     display: flex;
 
+    @media screen and (max-width: 1440px) {
+      padding: 0 50px;
+    }
+
     @media screen and (max-width: 767px) {
       flex-direction: column;
+      padding: 0 30px;
     }
   }
 
@@ -50,13 +55,14 @@
       width: 100%;
       background: none;
       padding: 6% 0 0 0;
+      margin-right: 0;
     }
 
     button {
       width: 100%;
       background: none;
-      border: #DB002D 1px solid;
-      color: #DB002D;
+      color: #fff;
+      background: #DB002D;
       padding: 10px;
       position: relative;
       display: none;
@@ -91,6 +97,10 @@
 
       li {
         border-bottom: #9E9E9E 1px solid;
+
+        &.active a {
+          color: #DB002D;
+        }
       }
 
       a {
@@ -150,6 +160,10 @@
 
       .item {
         width: calc((100% - 40px)/2);
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
 
         .top {
           display: flex;
@@ -258,27 +272,28 @@
   }
 }
 
-.newsDetail .titleBox .title {
+.newsDetail .side .title {
   font-size: 2.25rem;
-  font-weight: bold;
   color: #041c5a;
+  font-weight: 800;
   margin: 0 0 30px;
+  line-height: 1.2;
 }
 
 @media screen and (max-width: 991px) {
-  .newsDetail .titleBox .title {
+  .newsDetail .side .title {
     font-size: 1.875rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .newsDetail .titleBox .title {
+  .newsDetail .side .title {
     font-size: 26px;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .newsDetail .titleBox .title {
+  .newsDetail .side .title {
     font-size: 1.25rem;
   }
 }
@@ -292,6 +307,13 @@
   padding: 10px 20px;
   background: #db002d;
   transform: translateY(50%);
+}
+
+@media screen and (max-width: 767px) {
+  .newsDetail time {
+    font-size: 0.9rem;
+    transform: translateY(0);
+  }
 }
 
 .newsDetail .newsPic {

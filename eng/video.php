@@ -22,24 +22,13 @@
           <div class="pageContent">
             <div class="container">
               <div class="side wow fadeInUp" data-wow-delay="0s">
-                <div class="pageTitle">VIDEO</div>
-                <div class="tab">
-                  <button type="button">Pneumatic Nailers and Staplers</button>
-                  <button type="button">Air Tools</button>
-                  <button type="button">Hand Tools</button>
-                </div>
-                <div class="controlBox">
-                  <div class="control block1">
-                    <div class="page"></div>
-                    <div class="arrowBox"></div>
-                  </div>
-                  <div class="control block2">
-                    <div class="page"></div>
-                    <div class="arrowBox"></div>
-                  </div>
-                  <div class="control block3">
-                    <div class="page"></div>
-                    <div class="arrowBox"></div>
+                <div class="box">
+                  <div class="pageTitle">VIDEO</div>
+                  <button type="button">MENU</button>
+                  <div class="tab">
+                    <button type="button">Pneumatic Nailers and Staplers</button>
+                    <button type="button">Air Tools</button>
+                    <button type="button">Hand Tools</button>
                   </div>
                 </div>
               </div>
@@ -116,15 +105,20 @@
   </div>
   <?php include('include_body_bottom.php'); ?>
   <script>
-    $('.videoList .tab button').eq(0).addClass('active');
-    $('.videoList .contentBox .content').eq(0).addClass('active');
-    $('.videoList .controlBox .control').eq(0).addClass('active');
-    $('.tab button').on('click', function() {
-      $(this).siblings().removeClass('active');
-      $(this).toggleClass('active');
-      console.log($(this).index());
-      $('.videoList .contentBox .content').eq($(this).index()).siblings().removeClass('active');
-      $('.videoList .contentBox .content').eq($(this).index()).addClass('active');
+    $(function() {
+      $('.videoList .tab button').eq(0).addClass('active');
+      $('.videoList .contentBox .content').eq(0).addClass('active');
+      $('.videoList .controlBox .control').eq(0).addClass('active');
+      $('.tab button').on('click', function() {
+        $(this).siblings().removeClass('active');
+        $(this).toggleClass('active');
+        console.log($(this).index());
+        $('.videoList .contentBox .content').eq($(this).index()).siblings().removeClass('active');
+        $('.videoList .contentBox .content').eq($(this).index()).addClass('active');
+      })
+      $('.side .box > button').on('click', function() {
+        $('.side .tab').slideToggle('fast');
+      })
     })
   </script>
 </body>

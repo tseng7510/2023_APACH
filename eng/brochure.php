@@ -3,7 +3,7 @@
 
 <head>
   <?php include('include_head.php'); ?>
-  <link rel="stylesheet" type="text/css" href="../css/brochure.css">
+  <link rel="stylesheet" type="text/css" href="../css/brochure.css?20240419">
 </head>
 
 <body>
@@ -22,24 +22,27 @@
           <div class="pageContent">
             <div class="container">
               <div class="side wow fadeInUp" data-wow-delay="0s">
-                <div class="pageTitle">Catalogue</div>
-                <div class="tab">
-                  <button type="button">Pneumatic Nailers and Staplers</button>
-                  <button type="button">Air Tools</button>
-                  <button type="button">Hand Tools</button>
-                </div>
-                <div class="controlBox">
-                  <div class="control block1">
-                    <div class="page"></div>
-                    <div class="arrowBox"></div>
+                <div class="box">
+                  <div class="pageTitle">Brochure</div>
+                  <button type="button" class="sideMenuBtn">MENU</button>
+                  <div class="tab">
+                    <button type="button">Pneumatic Nailers and Staplers</button>
+                    <button type="button">Air Tools</button>
+                    <button type="button">Hand Tools</button>
                   </div>
-                  <div class="control block2">
-                    <div class="page"></div>
-                    <div class="arrowBox"></div>
-                  </div>
-                  <div class="control block3">
-                    <div class="page"></div>
-                    <div class="arrowBox"></div>
+                  <div class="controlBox">
+                    <div class="control block1">
+                      <div class="page"></div>
+                      <div class="arrowBox"></div>
+                    </div>
+                    <div class="control block2">
+                      <div class="page"></div>
+                      <div class="arrowBox"></div>
+                    </div>
+                    <div class="control block3">
+                      <div class="page"></div>
+                      <div class="arrowBox"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -117,6 +120,10 @@
   <?php include('include_body_bottom.php'); ?>
   <script>
     $(function() {
+      $('.side .sideMenuBtn').on('click', function() {
+        console.log('a');
+        $('.side .tab').slideToggle('fast');
+      })
       $('.brochureList .contentBox .listBox').each(function(i) {
         $(this).slick({
           slidesToShow: 3,
@@ -138,12 +145,6 @@
                 slidesToShow: 1,
               }
             },
-            {
-              breakpoint: 550,
-              settings: {
-                slidesToShow: 2,
-              }
-            }
           ],
         })
       })
@@ -172,6 +173,7 @@
       })
       $('.brochureList .controlBox .control').eq($(this).index()).siblings().removeClass('active');
       $('.brochureList .controlBox .control').eq($(this).index()).addClass('active');
+
     })
   </script>
 </body>

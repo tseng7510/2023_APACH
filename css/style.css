@@ -1793,6 +1793,9 @@ button:focus {
 
 .breadcrumbBox {
   width: 100%;
+  position: relative;
+  z-index: 9;
+  background: #fff;
 }
 .breadcrumbBox .breadcrumb {
   font-size: 15px;
@@ -1856,6 +1859,10 @@ button:focus {
   display: inline-block;
 }
 
+.footerBox {
+  position: relative;
+  z-index: 9;
+}
 .footerBox .footer {
   background: #041c5a;
 }

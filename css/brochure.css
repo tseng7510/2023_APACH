@@ -1,43 +1,101 @@
-.innerPage .pageContent {
-  padding: 6% 0;
-}
-
-.brochureList {
-  background: url("../images/in/brochure_bg.jpg") left top no-repeat;
+.brochureList .pageContent {
+  padding: 0;
 }
 .brochureList .container {
-  max-width: 1770px;
-  padding-right: 0;
-  margin: 0 0 0 auto;
+  width: auto;
+  max-width: none;
+  margin: 0 auto 0 0;
+  padding: 0;
   display: flex;
-  overflow: hidden;
-  box-sizing: border-box;
+  box-sizing: content-box;
+  isolation: isolate;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1440px) {
   .brochureList .container {
-    width: 100%;
+    padding-right: 50px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 767px) {
   .brochureList .container {
     flex-direction: column;
-    padding-right: 20px;
+    padding: 0 20px;
   }
 }
 .brochureList .side {
-  width: 30%;
-  max-width: 464px;
   display: flex;
   flex-direction: column;
+  width: 30%;
+  padding-top: 6%;
+  padding-bottom: 10%;
+  padding-left: clamp(30px, 8%, 150px);
+}
+@media screen and (max-width: 1440px) {
+  .brochureList .side {
+    padding-left: 50px;
+  }
 }
 @media screen and (max-width: 991px) {
   .brochureList .side {
     width: 40%;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 767px) {
   .brochureList .side {
+    top: 0;
     width: 100%;
+    position: relative;
+    padding-left: 0;
+    padding-top: 39px;
+    padding-bottom: 20px;
+  }
+}
+.brochureList .side::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 200px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  background: url("../images/in/brochure_bg.jpg") left top no-repeat;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .brochureList .side::before {
+    left: -20px;
+    width: calc(100% + 40px);
+  }
+}
+.brochureList .side .box > button {
+  width: 100%;
+  background: none;
+  color: #fff;
+  background: #DB002D;
+  padding: 10px;
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .brochureList .side .box > button {
+    display: block;
+  }
+}
+.brochureList .side .box > button::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+@media screen and (min-width: 768px) {
+  .brochureList .side .tab {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .brochureList .side .tab {
+    max-width: none;
+    display: none;
   }
 }
 @media screen and (max-width: 550px) {
@@ -54,9 +112,11 @@
   font-weight: 600;
   text-align: left;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 767px) {
   .brochureList .side .tab button {
     padding: 15px 0;
+    background: none;
+    border-bottom: #9E9E9E 1px solid;
   }
 }
 .brochureList .side .tab button.active, .brochureList .side .tab button:hover {
@@ -64,9 +124,11 @@
   color: #FFF;
   padding: 35px 25px;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 767px) {
   .brochureList .side .tab button.active, .brochureList .side .tab button:hover {
-    padding: 15px 25px;
+    padding: 15px 0;
+    background: none;
+    color: #DB002D;
   }
 }
 .brochureList .side .pageTitle {
@@ -74,16 +136,20 @@
   margin-bottom: 90px;
   font-size: 4.25rem;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1440px) {
   .brochureList .side .pageTitle {
-    font-size: 3.375rem;
     margin-bottom: 60px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 991px) {
+  .brochureList .side .pageTitle {
+    font-size: 3.375rem;
+  }
+}
+@media screen and (max-width: 767px) {
   .brochureList .side .pageTitle {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 .brochureList .side .controlBox {
@@ -124,6 +190,50 @@
     gap: 10px;
   }
 }
+.brochureList .side .controlBox {
+  margin: auto 0 0;
+  padding-right: 30px;
+}
+@media screen and (max-width: 767px) {
+  .brochureList .side .controlBox {
+    padding-right: 0;
+    margin-top: 26px;
+  }
+}
+.brochureList .side .controlBox .control {
+  width: 100%;
+  display: none;
+}
+.brochureList .side .controlBox .control.active {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (max-width: 767px) {
+  .brochureList .side .controlBox .control.active {
+    align-items: center;
+  }
+}
+.brochureList .side .controlBox .control .page {
+  font-size: 1.5rem;
+  color: #878787;
+  font-weight: 600;
+}
+.brochureList .side .controlBox .control .page span {
+  color: #DB002D;
+}
+.brochureList .side .controlBox .control button {
+  border: none;
+}
+.brochureList .side .controlBox .arrowBox {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 991px) {
+  .brochureList .side .controlBox .arrowBox {
+    gap: 10px;
+  }
+}
 .brochureList .side .controlBox .slick-arrow {
   background: none;
   position: relative;
@@ -148,8 +258,7 @@
 }
 .brochureList .contentBox {
   width: 70%;
-  margin-right: -20px;
-  flex-grow: 1;
+  padding-top: 6%;
 }
 @media screen and (max-width: 991px) {
   .brochureList .contentBox {
@@ -175,6 +284,11 @@
   filter: grayscale(100%);
   isolation: isolate;
 }
+@media screen and (max-width: 767px) {
+  .brochureList .contentBox .listBox .item .pic {
+    filter: grayscale(0);
+  }
+}
 .brochureList .contentBox .listBox .item .pic::after {
   content: "";
   position: absolute;
@@ -182,6 +296,12 @@
   display: block;
   background: linear-gradient(to bottom, rgb(136, 136, 136) 0%, rgb(136, 136, 136) 100%);
   opacity: 0.5;
+}
+@media screen and (max-width: 767px) {
+  .brochureList .contentBox .listBox .item .pic::after {
+    opacity: 1;
+    background: linear-gradient(to bottom, rgb(4, 28, 90) 0%, rgba(4, 28, 90, 0) 100%);
+  }
 }
 .brochureList .contentBox .listBox .item .title {
   position: absolute;
@@ -192,22 +312,19 @@
   left: 32px;
   right: 32px;
   transition: all 0.3s ease;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1440px) {
   .brochureList .contentBox .listBox .item .title {
     font-size: 1.625rem;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 767px) {
   .brochureList .contentBox .listBox .item .title {
-    bottom: 20px;
+    font-size: 1.375rem;
+    top: 20px;
+    bottom: auto;
     left: 20px;
     right: 20px;
-    font-size: 1.375rem;
   }
 }
 .brochureList .contentBox .listBox .item a {
@@ -232,6 +349,11 @@
   transform: translate(-50%, -50%) rotate(-90deg);
   opacity: 0;
   transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .brochureList .contentBox .listBox .item a::after {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 550px) {
   .brochureList .contentBox .listBox .item a::after {
