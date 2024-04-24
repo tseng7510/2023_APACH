@@ -312,13 +312,13 @@
     padding: 0 20px 20px;
   }
 }
-.productsSearchBox .searchForm .selectBox > li:nth-child(1),
+/* .productsSearchBox .searchForm .selectBox > li:nth-child(1),
 .productsSearchBox .searchForm .selectBox > li:nth-child(3) {
   width: 40%;
 }
 .productsSearchBox .searchForm .selectBox > li:nth-child(2) {
   width: 55%;
-}
+} */
 @media screen and (max-width: 767px) {
   .productsSearchBox .searchForm .selectBox > li {
     width: 100% !important;
