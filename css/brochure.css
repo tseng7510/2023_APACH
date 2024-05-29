@@ -283,6 +283,20 @@
 .brochureList .contentBox .listBox .item .pic {
   isolation: isolate;
 }
+.brochureList .contentBox .listBox .item .pic::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  background: linear-gradient(to bottom, rgb(136, 136, 136) 0%, rgb(136, 136, 136) 100%);
+  opacity: 0.5;
+}
+@media screen and (max-width: 767px) {
+  .brochureList .contentBox .listBox .item .pic::after {
+    opacity: 1;
+    background: linear-gradient(to bottom, rgb(4, 28, 90) 0%, rgba(4, 28, 90, 0) 100%);
+  }
+}
 .brochureList .contentBox .listBox .item .title {
   position: absolute;
   color: #fff;
@@ -342,6 +356,13 @@
 }
 .brochureList .contentBox .listBox .item a:hover::after {
   opacity: 1;
+}
+.brochureList .contentBox .listBox .item a:hover .pic {
+  filter: grayscale(0%);
+}
+.brochureList .contentBox .listBox .item a:hover .pic::after {
+  opacity: 1;
+  background: linear-gradient(to bottom, rgb(4, 28, 90) 0%, rgba(4, 28, 90, 0) 100%);
 }
 .brochureList .contentBox .listBox .item a:hover .title {
   top: 32px;
