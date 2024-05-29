@@ -131,7 +131,7 @@
   inset: 0;
   z-index: 1;
   display: block;
-  background: #000;
+  background: #4b4b4b;
   opacity: 0.5;
 }
 .banner .item .pic::after {
